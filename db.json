@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "title": "Dar comida al perro",
+      "id": 1,
+      "completed": false
+    },
+    {
+      "title": "Llenar la botella de agua",
+      "id": 2,
+      "completed": false
+    },
+    {
+      "title": "Comprar brocoli",
+      "id": 3,
+      "completed": false
+    },
+    {
+      "title": "Comprar aceite",
+      "id": 4,
+      "completed": false
+    },
+    {
+      "title": "Llevar un lapiz",
+      "id": 5
+    },
+    {
+      "title": "Caminar un rato",
+      "id": 6
+    },
+    {
+      "title": "Ir a buscar el correo ",
+      "id": 7
+    },
+    {
+      "title": "Ver tareas",
+      "id": 8
+    },
+    {
+      "title": "Programar",
+      "id": 9
+    }
+  ]
+}
