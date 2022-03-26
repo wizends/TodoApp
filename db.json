@@ -1,32 +1,16 @@
 {
   "todos": [
     {
-      "title": "Dar comida al perro",
+      "title": "Algo",
+      "date": "2022-03-26",
       "id": 1,
       "completed": false
     },
     {
-      "title": "Llenar la botella de agua",
+      "title": "Otra cosa",
+      "date": "2022-03-26",
       "id": 2,
       "completed": false
-    },
-    {
-      "title": "Comprar brocoli",
-      "id": 3,
-      "completed": false
-    },
-    {
-      "title": "Comprar aceite",
-      "id": 4,
-      "completed": false
-    },
-    {
-      "title": "Llevar un lapiz",
-      "id": 5
-    },
-    {
-      "title": "Caminar un rato",
-      "id": 6
     }
   ]
 }

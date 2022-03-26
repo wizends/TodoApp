@@ -24,15 +24,23 @@ const styles = {
 }
 
 const AddTodoForm = () => {
+	
 	const [value, setValue] = useState('');
 	const dispatch = useDispatch();
 
 	const onSubmit = (event) => {
+		let dateNow = new Date();
+		let date = dateNow.getDate();
+		let month = dateNow.getMonth() + 1;
+		let year = dateNow.getFullYear();
+		const separator = "-";
+		const dateSending = `${year}${separator}${month<10?`0${month}`:`${month}`}${separator}${date}`;
 		event.preventDefault();
 		if (value) {
 			dispatch(
 				addTodoAsync({
 					title: value,
+					date: dateSending
 				})
 			);
 		}

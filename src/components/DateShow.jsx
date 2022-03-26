@@ -17,6 +17,7 @@ const DateShow = () => {
 
     return(
         <span style={styles.p}>Hoy:{`${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`}</span>
+
     );
 }
 export default DateShow;

@@ -16,12 +16,12 @@ export const getTodosAsync = createAsyncThunk(
 export const addTodoAsync = createAsyncThunk(
 	'todos/addTodoAsync',
 	async (payload) => {
-		const resp = await fetch('http://localhost:3004/todos?_page=1', {
+		const resp = await fetch('http://localhost:3004/todos', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ title: payload.title }),
+			body: JSON.stringify({ title: payload.title, date: payload.date }),
 		});
 
 		if (resp.ok) {
@@ -58,6 +58,24 @@ export const deleteTodoAsync = createAsyncThunk(
 
 		if (resp.ok) {
 			return { id: payload.id };
+		}
+	}
+);
+
+export const editTodoAsync = createAsyncThunk(
+	'todos/editTodoAsync',
+	async (payload) => {
+		const resp = await fetch(`http://localhost:3004/todos/${payload.id}`, {
+			method: 'PUT',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ title: payload.title, date: payload.date }),
+		});
+
+		if (resp.ok) {
+			const todo = await resp.json();
+			return { todo };
 		}
 	}
 );

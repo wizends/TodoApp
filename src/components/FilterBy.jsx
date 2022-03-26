@@ -26,11 +26,6 @@ const showOrderList = () =>{
     }
     
 }
-const closeOrderList = () =>{
-    const visible = document.getElementById("visible");
-    visible.style.visibility = "hidden"
-}
-
 const FilterBy = () => {
 	return (
         <div>
