@@ -1,4 +1,4 @@
-Hola, bienvenido a mi aplicacion de Todos
+<h1>Hola, bienvenido a mi aplicacion de Todos</h1>
 
 Para empezar utiliza el comando:
  ### `npm install` 
@@ -19,5 +19,5 @@ Aun no hay tests
 
 ### `npm run build`
 
-Usa este comando para buildear una version estable.
+Usa este comando para buildear una version estable
 
