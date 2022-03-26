@@ -4,7 +4,6 @@ import AddTodoForm from './components/AddTodoForm';
 import TodoList from './components/TodoList';
 import TotalCompleteItems from './components/TotalCompleteItems';
 import DateShow from './components/DateShow';
-import Pagination from './components/Pagination';
 import MasiveDelete from './components/MasiveDelete';
 import FilterBy from './components/FilterBy';
 
@@ -35,7 +34,6 @@ const App = () => {
       
 			<TodoList />
       <AddTodoForm />
-      <Pagination />
       <TotalCompleteItems />
 		</div>
 	);

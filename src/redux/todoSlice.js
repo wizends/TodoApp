@@ -4,13 +4,14 @@ import { nanoid } from 'nanoid';
 export const getTodosAsync = createAsyncThunk(
 	'todos/getTodosAsync',
 	async (currentPage) => {
-		const resp = await fetch(`http://localhost:3004/todos?_page=${currentPage}&_limit=4`);
+		const resp = await fetch(`http://localhost:3004/todos`);
 		if (resp.ok) {
 			const todos = await resp.json();
 			return { todos };
 		}
 	}
 );
+
 
 export const addTodoAsync = createAsyncThunk(
 	'todos/addTodoAsync',

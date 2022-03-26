@@ -6,7 +6,8 @@ const styles = {
         display: "inline",
         marginBottom:"20px",
         marginTop:"20px",
-        color:"white"
+        color:"white",
+        width:"150px"
     }
 }
 

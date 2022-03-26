@@ -12,7 +12,7 @@ const styles = {
     div:{
         position:"fixed",
         width:"200px",
-        right:"90px",
+        right:"20%",
         zIndex:"99",
         visibility:"hidden"
     }
