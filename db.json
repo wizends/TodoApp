@@ -1,10 +1,11 @@
 {
   "todos": [
     {
-      "title": "asdasd",
+      "title": "Hacer las compras del mes",
       "date": "2022-03-26",
-      "dateToComplete": "2022-04-01",
-      "id": 2
+      "dateToComplete": "2022-04-08",
+      "id": 2,
+      "completed": false
     },
     {
       "title": "Arreglar el techo",
@@ -17,7 +18,21 @@
       "title": "Comer papa",
       "date": "2022-03-26",
       "dateToComplete": "2022-03-25",
-      "id": 4
+      "id": 4,
+      "completed": false
+    },
+    {
+      "title": "Ir a pasear al perro",
+      "date": "2022-03-26",
+      "dateToComplete": "2022-03-26",
+      "id": 5,
+      "completed": false
+    },
+    {
+      "title": "Hacer trabajo",
+      "date": "2022-03-26",
+      "dateToComplete": "2022-03-31",
+      "id": 6
     }
   ]
 }

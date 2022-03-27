@@ -21,8 +21,8 @@ const ModalEdit = ({ setOpenModal, todo, title,dateToComplete }) => {
 	
 
 	const onSubmit = (event) => {
+		setOpenModal(false);
 		const dateto = document.getElementById("todoDate").value
-		console.log(dateToComplete)
 		let dateNow = new Date();
 		let date = dateNow.getDate();
 		let month = dateNow.getMonth() + 1;

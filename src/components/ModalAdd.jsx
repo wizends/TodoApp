@@ -16,6 +16,7 @@ const ModalAdd = ({setOpenModal}) => {
 	};
 
 	const onSubmit = (event) => {
+        setOpenModal(false);
 		const dateToComplete = document.getElementById("dateComplete").value
 		let dateNow = new Date();
 		let date = dateNow.getDate();

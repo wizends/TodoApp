@@ -109,6 +109,15 @@ export const todoSlice = createSlice({
 		deleteTodo: (state, action) => {
 			return state.filter((todo) => todo.id !== action.payload.id);
 		},
+		editTodo: (state, action ) => {
+			const todo = {
+				id: action.payload.id,
+				title: action.payload.title,
+				date: action.payload.date,
+				dateToComplete: action.payload.dateTo
+			};
+			return state.push(todo);
+		}
 	},
 	extraReducers: {
 		[getTodosAsync.fulfilled]: (state, action) => {
@@ -125,6 +134,14 @@ export const todoSlice = createSlice({
 		},
 		[deleteTodoAsync.fulfilled]: (state, action) => {
 			return state.filter((todo) => todo.id !== action.payload.id);
+		},
+		[editTodoAsync.fulfilled]: (state, action) => {
+			const index = state.findIndex(
+				(todo) => todo.id === action.payload.todo.id
+			);
+			state[index].title = action.payload.todo.title;
+			state[index].date = action.payload.todo.date;
+			state[index].dateToComplete = action.payload.todo.dateToComplete;
 		},
 	},
 });
