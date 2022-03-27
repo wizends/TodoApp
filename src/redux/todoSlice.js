@@ -11,6 +11,16 @@ export const getTodosAsync = createAsyncThunk(
 		}
 	}
 );
+export const getTodosByIdAsync = createAsyncThunk(
+	'todos/getTodosById',
+	async (payload) => {
+		const resp =  fetch(`http://localhost:3004/todos/${payload}`,);
+		if (resp.ok) {
+			const todos = await resp.json();
+			return { todos };
+		}
+	}
+);
 
 
 export const addTodoAsync = createAsyncThunk(
@@ -21,7 +31,7 @@ export const addTodoAsync = createAsyncThunk(
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ title: payload.title, date: payload.date }),
+			body: JSON.stringify({ title: payload.title, date: payload.date, dateToComplete: payload.dateTo }),
 		});
 
 		if (resp.ok) {
@@ -70,7 +80,7 @@ export const editTodoAsync = createAsyncThunk(
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ title: payload.title, date: payload.date }),
+			body: JSON.stringify({ title: payload.title, date: payload.date, dateToComplete:payload.dateTo}),
 		});
 
 		if (resp.ok) {
